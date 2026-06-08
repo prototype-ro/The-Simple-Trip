@@ -1,50 +1,76 @@
 import { motion } from 'framer-motion'
-import { TypewriterEffect } from '@/components/TypewriterEffect'
 
-interface HeroProps {
-  onCtaClick: () => void
+const clients = ['LinkedIn', 'Forbes', 'PMU', 'Paris Blockchain', 'Rockfi', 'Ircam']
+
+const wordVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.08, duration: 0.5, ease: 'easeOut' as const },
+  }),
 }
 
-export function Hero({ onCtaClick }: HeroProps) {
+export function Hero() {
+  const headline = 'The design© partner for top-tier companies'.split(' ')
+
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-24 bg-blanc text-forge">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
+    <section className="min-h-screen flex flex-col justify-center px-8 pt-32 pb-20 max-w-7xl mx-auto">
+      <h1 className="text-6xl md:text-8xl font-black text-[#F5F0E8] leading-[0.95] tracking-tight max-w-4xl mb-8">
+        {headline.map((word, i) => (
+          <motion.span
+            key={i}
+            custom={i}
+            initial="hidden"
+            animate="visible"
+            variants={wordVariants}
+            className="inline-block mr-[0.25em]"
+          >
+            {word}
+          </motion.span>
+        ))}
+      </h1>
+
+      <motion.p
+        initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.43, 0.13, 0.23, 0.96] }}
-        className="flex flex-col items-center text-center max-w-3xl mx-auto gap-10"
+        transition={{ delay: 0.7, duration: 0.5 }}
+        className="text-[#666666] text-lg max-w-xl mb-10"
       >
-        {/* Logo */}
-        <img
-          src="/logo.svg"
-          alt="The Simple Trip"
-          className="w-12 h-12 md:w-16 md:h-16"
-        />
+        We help funded startups ship iconic brands, conversion-ready sites, and investor-proof decks.
+      </motion.p>
 
-        {/* Typewriter headline */}
-        <TypewriterEffect
-          words={[
-            { text: 'Explore' },
-            { text: 'qualquer' },
-            { text: 'lugar.' },
-            { text: 'Sem' },
-            { text: 'medo.', className: 'text-[#F5E642]' },
-          ]}
-        />
-
-        {/* Subtext */}
-        <p className="font-sans text-base md:text-lg text-forge/70 max-w-xl leading-relaxed">
-          O sistema de viagem que reúne roteiro, finanças, documentos e
-          hospedagem em um só lugar.
-        </p>
-
-        {/* CTA */}
-        <button
-          onClick={onCtaClick}
-          className="mt-2 px-8 py-3 bg-forge text-blanc font-sans text-sm tracking-wide rounded-lg hover:bg-forge/90 transition-colors duration-300"
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.9, duration: 0.4 }}
+      >
+        <a
+          href="#"
+          className="inline-block border border-[#F5F0E8] text-[#F5F0E8] px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#F5F0E8] hover:text-[#0A0A0A] transition-colors"
         >
-          Ver o template
-        </button>
+          Book an intro call
+        </a>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.6 }}
+        className="mt-24 flex items-center gap-8 flex-wrap"
+      >
+        <span className="text-[#666666] text-xs uppercase tracking-widest">Trusted by</span>
+        {clients.map((client, i) => (
+          <motion.span
+            key={client}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.3 + i * 0.1 }}
+            className="text-[#444444] text-sm font-medium"
+          >
+            {client}
+          </motion.span>
+        ))}
       </motion.div>
     </section>
   )
