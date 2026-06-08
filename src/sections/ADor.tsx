@@ -2,7 +2,7 @@
 // No external assets required.
 
 import { motion } from 'framer-motion'
-import { GooeyTextMorphing } from '@/components/GooeyTextMorphing'
+import { AnimatedWordCycle } from '@/components/ui/animated-hero'
 
 export function ADor() {
   return (
@@ -19,15 +19,11 @@ export function ADor() {
           Parece familiar?
         </motion.p>
 
-        {/* Gooey morphing text */}
-        <GooeyTextMorphing
-          phrases={[
-            'Roteiro num app.',
-            'Gastos em outro.',
-            'Documentos no WhatsApp.',
-            'Hospedagem numa aba perdida.',
-          ]}
-          textClassName="text-blanc"
+        {/* Animated word cycle */}
+        <AnimatedWordCycle
+          staticText="Tudo no mesmo lugar."
+          words={['roteiro', 'gastos', 'documentos', 'hospedagem', 'transporte']}
+          intervalMs={2000}
         />
 
         {/* Closing line */}
