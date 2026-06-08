@@ -101,20 +101,20 @@ export function GooeyTextMorphing({
       </svg>
 
       <div
-        className="flex items-center justify-center"
+        className="relative flex items-center justify-center h-20 md:h-28"
         style={{ filter: "url(#threshold)" }}
       >
         <span
           ref={text1Ref}
           className={cn(
-            "absolute inline-block select-none text-center font-display text-3xl md:text-5xl text-forge",
+            "absolute inline-block select-none text-center font-display text-3xl md:text-5xl",
             textClassName
           )}
         />
         <span
           ref={text2Ref}
           className={cn(
-            "absolute inline-block select-none text-center font-display text-3xl md:text-5xl text-forge",
+            "absolute inline-block select-none text-center font-display text-3xl md:text-5xl",
             textClassName
           )}
         />

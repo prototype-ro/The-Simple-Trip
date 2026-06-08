@@ -27,6 +27,7 @@ export function ADor() {
             'Documentos no WhatsApp.',
             'Hospedagem numa aba perdida.',
           ]}
+          textClassName="text-blanc"
         />
 
         {/* Closing line */}
