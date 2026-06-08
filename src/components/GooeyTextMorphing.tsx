@@ -107,14 +107,14 @@ export function GooeyTextMorphing({
         <span
           ref={text1Ref}
           className={cn(
-            "absolute inline-block select-none text-center font-display text-3xl md:text-5xl",
+            "absolute inline-block select-none text-center whitespace-nowrap font-display text-3xl md:text-5xl",
             textClassName
           )}
         />
         <span
           ref={text2Ref}
           className={cn(
-            "absolute inline-block select-none text-center font-display text-3xl md:text-5xl",
+            "absolute inline-block select-none text-center whitespace-nowrap font-display text-3xl md:text-5xl",
             textClassName
           )}
         />
