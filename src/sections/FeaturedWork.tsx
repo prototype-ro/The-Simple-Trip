@@ -6,28 +6,32 @@ const modules = [
     name: 'Cada dia, organizado.',
     body: 'Atividades por cidade, horário e data.',
     image: '/screenshots/roteiro.png',
+    objectPos: 'object-top',
   },
   {
     kicker: 'Budget & Controle',
     name: 'Quanto ainda tem.',
     body: 'Câmbio automático, budget por categoria, balanço em tempo real.',
     image: '/screenshots/gastos.png',
+    objectPos: 'object-left-top',
   },
   {
     kicker: 'Tudo Incluso',
     name: 'Do passaporte ao check-out.',
     body: 'Documentos por viajante, transportes, hospedagens.',
     image: '/screenshots/documentos.png',
+    objectPos: 'object-top',
   },
   {
     kicker: 'Dashboard',
     name: 'A viagem inteira numa tela.',
     body: 'Visão geral de tudo que importa, sempre à mão.',
     image: '/screenshots/dashboard.png',
+    objectPos: 'object-top',
   },
 ]
 
-function ModuleCard({ kicker, name, body, image }: typeof modules[0]) {
+function ModuleCard({ kicker, name, body, image, objectPos }: typeof modules[0]) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 32 }}
@@ -41,7 +45,7 @@ function ModuleCard({ kicker, name, body, image }: typeof modules[0]) {
           src={image}
           alt={kicker}
           loading="lazy"
-          className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+          className={`w-full h-full object-cover ${objectPos} group-hover:scale-[1.03] transition-transform duration-500`}
         />
       </div>
       <div className="absolute inset-0 bg-[#0A0A0A]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
