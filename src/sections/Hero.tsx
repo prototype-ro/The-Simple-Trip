@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion'
 
-const proofs = ['Brasil, na estrada', 'Europa, um mês', 'O outro lado do mundo']
-
 const wordVariants = {
   hidden: { opacity: 0, y: 24 },
   visible: (i: number) => ({
@@ -54,27 +52,6 @@ export function Hero() {
         </a>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.6 }}
-        className="mt-24 flex items-center gap-8 flex-wrap"
-      >
-        <span className="text-[#666666] text-xs uppercase tracking-widest">
-          Testado em
-        </span>
-        {proofs.map((proof, i) => (
-          <motion.span
-            key={proof}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.3 + i * 0.1 }}
-            className="text-[#444444] text-sm font-medium"
-          >
-            {proof}
-          </motion.span>
-        ))}
-      </motion.div>
     </section>
   )
 }
