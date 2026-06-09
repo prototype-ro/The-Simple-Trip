@@ -25,7 +25,7 @@ const plans = [
     benefits: [
       'Tudo do Starter',
       'Versão avançada do template',
-      'Ebook: Stack de Apps do Viajante',
+      'Ebook: Stack de Apps Essenciais do Viajante',
       'Acesso vitalício + atualizações',
     ],
   },
