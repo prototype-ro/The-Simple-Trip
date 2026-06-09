@@ -21,7 +21,11 @@ export function FooterCTA() {
       </div>
 
       <div className="border-t border-[#1E1E1E] px-8 py-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <span className="text-[#F5F0E8] font-bold">The Simple Trip</span>
+        <img
+          src="/thesimpletrip_logo_darkmode.svg"
+          alt="The Simple Trip"
+          className="h-10 w-auto"
+        />
 
         <nav className="flex gap-8">
           {navLinks.map((l) => (

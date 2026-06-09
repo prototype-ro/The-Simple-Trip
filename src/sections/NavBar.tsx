@@ -19,9 +19,13 @@ export function NavBar() {
         scrolled ? 'bg-[#0A0A0A]/95 backdrop-blur-sm border-b border-[#1E1E1E]' : 'bg-transparent'
       }`}
     >
-      <span className="text-[#F5F0E8] font-bold text-lg tracking-tight">
-        The Simple Trip
-      </span>
+      <a href="#" aria-label="The Simple Trip">
+        <img
+          src="/thesimpletrip_logo_darkmode.svg"
+          alt="The Simple Trip"
+          className="h-10 w-auto"
+        />
+      </a>
 
       <div className="hidden md:flex items-center gap-10">
         {[
