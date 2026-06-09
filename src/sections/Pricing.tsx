@@ -5,7 +5,7 @@ const plans = [
     name: 'Starter',
     subtitle: 'Tudo que você precisa pra viajar organizado',
     price: 'R$24,90',
-    href: '[LINK_CHECKOUT_STARTER]',
+    href: 'https://pay.kiwify.com.br/TqsgZTQ',
     highlight: false,
     badge: undefined as string | undefined,
     benefits: [
@@ -19,7 +19,7 @@ const plans = [
     name: 'Pro',
     subtitle: 'Tudo do Starter + os extras de quem viaja sempre',
     price: 'R$39,90',
-    href: '[LINK_CHECKOUT_PRO]',
+    href: 'https://pay.kiwify.com.br/JJaJoQX',
     highlight: true,
     badge: 'Mais escolhido',
     benefits: [
@@ -77,6 +77,8 @@ export function Pricing() {
 
             <a
               href={plan.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`block text-center font-semibold px-6 py-4 rounded-full text-sm transition-colors ${
                 plan.highlight
                   ? 'bg-[#C8FF00] text-[#0A0A0A] hover:bg-[#d4ff33]'
