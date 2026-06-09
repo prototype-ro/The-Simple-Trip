@@ -5,29 +5,29 @@ const modules = [
     kicker: 'Roteiro & Calendário',
     name: 'Cada dia, organizado.',
     body: 'Atividades por cidade, horário e data.',
-    aspect: 'aspect-[4/3]',
+    image: '/screenshots/roteiro.png',
   },
   {
     kicker: 'Budget & Controle',
     name: 'Quanto ainda tem.',
     body: 'Câmbio automático, budget por categoria, balanço em tempo real.',
-    aspect: 'aspect-square',
+    image: '/screenshots/gastos.png',
   },
   {
     kicker: 'Tudo Incluso',
     name: 'Do passaporte ao check-out.',
     body: 'Documentos por viajante, transportes, hospedagens.',
-    aspect: 'aspect-[4/3]',
+    image: '/screenshots/documentos.png',
   },
   {
     kicker: 'Dashboard',
     name: 'A viagem inteira numa tela.',
     body: 'Visão geral de tudo que importa, sempre à mão.',
-    aspect: 'aspect-square',
+    image: '/screenshots/dashboard.png',
   },
 ]
 
-function ModuleCard({ kicker, name, body, aspect }: typeof modules[0]) {
+function ModuleCard({ kicker, name, body, image }: typeof modules[0]) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 32 }}
@@ -36,8 +36,15 @@ function ModuleCard({ kicker, name, body, aspect }: typeof modules[0]) {
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className="group relative overflow-hidden rounded-lg bg-[#111111] cursor-pointer"
     >
-      <div className={`${aspect} bg-[#1E1E1E] w-full`} />
-      <div className="absolute inset-0 bg-[#0A0A0A]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+      <div className="aspect-[4/3] w-full overflow-hidden bg-[#1E1E1E]">
+        <img
+          src={image}
+          alt={kicker}
+          loading="lazy"
+          className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
+        />
+      </div>
+      <div className="absolute inset-0 bg-[#0A0A0A]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
         <span className="text-[#F5F0E8] text-sm font-semibold">Ver no template →</span>
       </div>
       <div className="p-5">
