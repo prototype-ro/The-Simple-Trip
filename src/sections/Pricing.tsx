@@ -88,6 +88,10 @@ export function Pricing() {
           </motion.div>
         ))}
       </div>
+
+      <p className="text-center text-[#666666] text-sm mt-10">
+        Pagamento único. Mais barato que remarcar um voo perdido.
+      </p>
     </section>
   )
 }

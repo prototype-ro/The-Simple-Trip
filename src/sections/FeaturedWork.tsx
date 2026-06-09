@@ -66,8 +66,9 @@ export function FeaturedWork() {
       <div className="mb-16">
         <h2 className="text-5xl font-black text-[#F5F0E8] mb-4">Tudo em um lugar só.</h2>
         <p className="text-[#666666] max-w-lg">
-          Você não quer organizar a viagem. Quer viver ela. Roteiro, finanças,
-          documentos, transporte e hospedagem — organizado do jeito que faz sentido.
+          Documento esquecido, reserva perdida, dinheiro acabando no meio do rolê.
+          Tudo que estraga viagem — resolvido num lugar só. Você não quer organizar
+          a viagem. Quer viver ela.
         </p>
       </div>
 
