@@ -20,28 +20,31 @@ export function NavBar() {
       }`}
     >
       <span className="text-[#F5F0E8] font-bold text-lg tracking-tight">
-        Brand Appart
+        The Simple Trip
       </span>
 
       <div className="hidden md:flex items-center gap-10">
-        {['Works', 'About us', 'Contact'].map((item) => (
+        {[
+          { label: 'Produto', href: '#produto' },
+          { label: 'Prova', href: '#prova' },
+          { label: 'FAQ', href: '#faq' },
+        ].map((item) => (
           <a
-            key={item}
-            href="#"
+            key={item.label}
+            href={item.href}
             className="text-[#666666] hover:text-[#F5F0E8] text-sm transition-colors"
           >
-            {item}
+            {item.label}
           </a>
         ))}
       </div>
 
       <div className="flex items-center gap-4">
-        <span className="text-[#666666] text-sm">FR</span>
         <a
-          href="#"
+          href="#oferta"
           className="bg-[#C8FF00] text-[#0A0A0A] text-sm font-semibold px-5 py-2 rounded-full hover:bg-[#d4ff33] transition-colors"
         >
-          Book a call now
+          Ver o template
         </a>
       </div>
     </motion.nav>

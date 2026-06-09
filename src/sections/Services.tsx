@@ -1,34 +1,30 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
-const services = [
+const faqs = [
   {
     number: '01',
-    name: 'Branding',
-    outcome: 'Perceived value up',
+    name: 'Preciso saber usar Notion?',
     description:
-      'Clarify positioning, define tone of voice, build visual systems. Each sprint delivers logo, guidelines, and social kit.',
+      'Não. O template já vem montado e pronto pra usar. Você só preenche — e tem um guia rápido pra qualquer dúvida.',
   },
   {
     number: '02',
-    name: 'Product Design',
-    outcome: 'UX friction down · Retention up',
+    name: 'Funciona no celular?',
     description:
-      'Start from business goals, map critical journeys, prototype solutions. Ships clear flows, UI library, dev-ready assets.',
+      'Sim. Roda no app do Notion no iOS e Android, além do desktop e navegador. Sua viagem inteira no bolso.',
   },
   {
     number: '03',
-    name: 'Web Design',
-    outcome: 'Conversion ready',
+    name: 'É vitalício ou assinatura?',
     description:
-      'Align messaging, page architecture, and UI. Fast-loading sites with clear structure and scalable bases for internal teams.',
+      'Pagamento único, acesso vitalício. Comprou, é seu — sem mensalidade, sem renovação.',
   },
   {
     number: '04',
-    name: 'Pitch Decks',
-    outcome: 'Raise faster',
+    name: 'E se eu não gostar?',
     description:
-      'Craft narrative that gets meetings. Design supports story with readable numbers, slide rhythm, multiple versions.',
+      'Garantia de 7 dias. Não curtiu, devolvo o valor integral, sem perguntas.',
   },
 ]
 
@@ -36,11 +32,11 @@ export function Services() {
   const [open, setOpen] = useState<string | null>(null)
 
   return (
-    <section className="px-8 py-32 max-w-7xl mx-auto">
-      <h2 className="text-5xl font-black text-[#F5F0E8] mb-16">What we do</h2>
+    <section id="faq" className="px-8 py-32 max-w-7xl mx-auto">
+      <h2 className="text-5xl font-black text-[#F5F0E8] mb-16">Antes de decidir.</h2>
 
       <div className="divide-y divide-[#1E1E1E]">
-        {services.map((s) => (
+        {faqs.map((s) => (
           <div key={s.number}>
             <button
               onClick={() => setOpen(open === s.number ? null : s.number)}
@@ -52,12 +48,9 @@ export function Services() {
                   {s.name}
                 </span>
               </div>
-              <div className="flex items-center gap-6">
-                <span className="text-[#666666] text-sm hidden md:block">{s.outcome}</span>
-                <span className="text-[#666666] text-xl leading-none">
-                  {open === s.number ? '−' : '+'}
-                </span>
-              </div>
+              <span className="text-[#666666] text-xl leading-none">
+                {open === s.number ? '−' : '+'}
+              </span>
             </button>
 
             <AnimatePresence initial={false}>

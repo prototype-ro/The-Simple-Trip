@@ -3,7 +3,7 @@ import { Hero }         from '@/sections/Hero'
 import { FeaturedWork } from '@/sections/FeaturedWork'
 import { Services }     from '@/sections/Services'
 import { Testimonials } from '@/sections/Testimonials'
-import { Team }         from '@/sections/Team'
+import { Pricing }      from '@/sections/Pricing'
 import { FooterCTA }    from '@/sections/FooterCTA'
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
       <FeaturedWork />
       <Services />
       <Testimonials />
-      <Team />
+      <Pricing />
       <FooterCTA />
     </main>
   )

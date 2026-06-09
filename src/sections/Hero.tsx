@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-const clients = ['LinkedIn', 'Forbes', 'PMU', 'Paris Blockchain', 'Rockfi', 'Ircam']
+const proofs = ['Brasil, na estrada', 'Europa, um mês', 'O outro lado do mundo']
 
 const wordVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -12,7 +12,7 @@ const wordVariants = {
 }
 
 export function Hero() {
-  const headline = 'The design© partner for top-tier companies'.split(' ')
+  const headline = ['Explore', 'qualquer', 'lugar.', 'Sem', 'medo.']
 
   return (
     <section className="min-h-screen flex flex-col justify-center px-8 pt-32 pb-20 max-w-7xl mx-auto">
@@ -24,7 +24,7 @@ export function Hero() {
             initial="hidden"
             animate="visible"
             variants={wordVariants}
-            className="inline-block mr-[0.25em]"
+            className={`inline-block mr-[0.25em] ${word === 'medo.' ? 'text-[#C8FF00]' : ''}`}
           >
             {word}
           </motion.span>
@@ -37,7 +37,8 @@ export function Hero() {
         transition={{ delay: 0.7, duration: 0.5 }}
         className="text-[#666666] text-lg max-w-xl mb-10"
       >
-        We help funded startups ship iconic brands, conversion-ready sites, and investor-proof decks.
+        O sistema de viagem que reúne roteiro, finanças, documentos e
+        hospedagem em um só lugar.
       </motion.p>
 
       <motion.div
@@ -46,10 +47,10 @@ export function Hero() {
         transition={{ delay: 0.9, duration: 0.4 }}
       >
         <a
-          href="#"
-          className="inline-block border border-[#F5F0E8] text-[#F5F0E8] px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#F5F0E8] hover:text-[#0A0A0A] transition-colors"
+          href="#oferta"
+          className="inline-block bg-[#C8FF00] text-[#0A0A0A] px-8 py-4 rounded-full text-sm font-semibold hover:bg-[#d4ff33] transition-colors"
         >
-          Book an intro call
+          Ver o template
         </a>
       </motion.div>
 
@@ -59,16 +60,18 @@ export function Hero() {
         transition={{ delay: 1.2, duration: 0.6 }}
         className="mt-24 flex items-center gap-8 flex-wrap"
       >
-        <span className="text-[#666666] text-xs uppercase tracking-widest">Trusted by</span>
-        {clients.map((client, i) => (
+        <span className="text-[#666666] text-xs uppercase tracking-widest">
+          Testado em
+        </span>
+        {proofs.map((proof, i) => (
           <motion.span
-            key={client}
+            key={proof}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.3 + i * 0.1 }}
             className="text-[#444444] text-sm font-medium"
           >
-            {client}
+            {proof}
           </motion.span>
         ))}
       </motion.div>
