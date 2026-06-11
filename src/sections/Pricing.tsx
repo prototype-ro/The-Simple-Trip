@@ -5,7 +5,7 @@ const plans = [
     name: 'Starter',
     subtitle: 'Tudo que você precisa pra viajar organizado',
     price: 'R$24,90',
-    href: 'https://pay.kiwify.com.br/TqsgZTQ',
+    href: 'https://pay.kiwify.com.br/IGoIM67',
     highlight: false,
     badge: undefined as string | undefined,
     benefits: [
@@ -19,7 +19,7 @@ const plans = [
     name: 'Pro',
     subtitle: 'Tudo do Starter + os extras de quem viaja sempre',
     price: 'R$39,90',
-    href: 'https://pay.kiwify.com.br/JJaJoQX',
+    href: 'https://pay.kiwify.com.br/nFHd9aP',
     highlight: true,
     badge: 'Mais escolhido',
     benefits: [
