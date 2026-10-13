@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compra confirmada — The Simple Trip</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon-fox.svg?v=2" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        background: #0A0A0A;
+        color: #F5F0E8;
+        font-family: 'Inter', sans-serif;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .logo {
+        width: 160px;
+        margin-bottom: 2.5rem;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #C8FF00;
+        color: #0A0A0A;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 0.35rem 0.9rem;
+        border-radius: 999px;
+        margin-bottom: 1.5rem;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        margin-bottom: 1.25rem;
+      }
+
+      h1 span { color: #C8FF00; }
+
+      p.sub {
+        color: #666666;
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 380px;
+        margin: 0 auto 2.5rem;
+      }
+
+      .card {
+        background: #111111;
+        border: 1px solid #1E1E1E;
+        border-radius: 1rem;
+        padding: 1.5rem 2rem;
+        max-width: 380px;
+        width: 100%;
+        margin: 0 auto 2.5rem;
+        text-align: left;
+      }
+
+      .card p {
+        font-size: 0.85rem;
+        color: #666666;
+        margin-bottom: 0.5rem;
+      }
+
+      .step {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+
+      .step:last-child { margin-bottom: 0; }
+
+      .step-num {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background: #1E1E1E;
+        color: #C8FF00;
+        font-size: 0.7rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.1rem;
+      }
+
+      .step-text {
+        font-size: 0.9rem;
+        color: #F5F0E8;
+        line-height: 1.5;
+      }
+
+      .step-text b { color: #C8FF00; }
+
+      a.back {
+        font-size: 0.8rem;
+        color: #444444;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      a.back:hover { color: #666666; }
+    </style>
+  </head>
+  <body>
+    <img src="/thesimpletrip_logo_darkmode.svg" alt="The Simple Trip" class="logo" />
+
+    <span class="badge">Compra confirmada</span>
+
+    <h1>Sua viagem<br />começa <span>agora.</span></h1>
+
+    <p class="sub">
+      O template está a caminho. Verifique seu e-mail — pode levar alguns minutos.
+    </p>
+
+    <div class="card">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Abra o e-mail de confirmação que enviamos para você</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Clique no link do template e selecione <b>"Duplicate"</b> no Notion</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">Preencha e comece a planejar — o template já vem montado</div>
+      </div>
+    </div>
+
+    <a class="back" href="https://thesimpletrip.com.br">← Voltar para o site</a>
+  </body>
+</html>

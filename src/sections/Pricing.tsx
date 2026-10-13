@@ -5,7 +5,7 @@ const plans = [
     name: 'Starter',
     subtitle: 'Tudo que você precisa pra viajar organizado',
     price: 'R$24,90',
-    href: 'https://pay.kiwify.com.br/IGoIM67',
+    href: 'https://pay.kirvano.com/c05fee37-2429-4b88-9f14-21fae6eced52',
     highlight: false,
     badge: undefined as string | undefined,
     benefits: [
@@ -19,7 +19,7 @@ const plans = [
     name: 'Pro',
     subtitle: 'Tudo do Starter + os extras de quem viaja sempre',
     price: 'R$39,90',
-    href: 'https://pay.kiwify.com.br/nFHd9aP',
+    href: 'https://pay.kirvano.com/56e2c6fc-1c05-463c-8d16-1365e56d1350',
     highlight: true,
     badge: 'Mais escolhido',
     benefits: [

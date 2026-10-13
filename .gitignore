@@ -24,3 +24,11 @@ dist-ssr
 *.sw?
 
 .vercel
+
+# macOS AppleDouble / metadata
+._*
+.DS_Store
+
+# env
+.env
+.env.*
